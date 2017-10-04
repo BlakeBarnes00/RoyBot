@@ -3,6 +3,8 @@ package org.usfirst.frc.team4065.robot;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
+import org.usfirst.frc.team4065.robot.RobotMap;
+
 public class Robot extends IterativeRobot {
 
 	public void robotInit() {
@@ -10,12 +12,10 @@ public class Robot extends IterativeRobot {
 		CameraServer.getInstance().startAutomaticCapture(0);
 		CameraServer.getInstance().startAutomaticCapture(1);
 		
-	
+		RobotMap.init();
 	}
-
-	public void telopInit() {
+	
+	public void teleopPeriodic() {
 		
 	}
-
-
 }
