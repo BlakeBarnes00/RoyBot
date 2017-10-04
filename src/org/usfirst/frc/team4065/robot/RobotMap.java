@@ -6,11 +6,13 @@ import com.ctre.MotorControl.CANTalon;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.XboxController;
 
 public class RobotMap {
 	
-	public static RobotDrive roybot; // TODO: Read more about the RobotDriver and other options
+	public static RobotDrive robot; // TODO: Read more about the RobotDriver and other options
 	public static Compressor compressor = new Compressor(); // TODO: Find out how to turn this on
+	public static XboxController controller = new XboxController(1); // TODO: http://www.instructables.com/id/Programming-an-FRC-Robot/ Speed with Z?
 	
 	public static ArrayList<CANTalon> motors = new ArrayList<CANTalon>();
 	private static void setupTalons() {
@@ -27,7 +29,6 @@ public class RobotMap {
 
 	public static void init() {
 		setupTalons();
-		roybot = new RobotDrive(motors.get(1), motors.get(2));
-		
+		robot = new RobotDrive(motors.get(1), motors.get(2));
 	}
 }
